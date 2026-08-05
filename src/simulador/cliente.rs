@@ -18,7 +18,6 @@ struct Cliente{
 
 impl Cliente{
     fn new(_id:usize, _nome:String) -> Self{
-
         let empty_v:Vec<Adj> = vec![];
 
         Self {
