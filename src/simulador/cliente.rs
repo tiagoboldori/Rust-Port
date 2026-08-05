@@ -27,8 +27,12 @@ impl Cliente{
         }
     }
     
-    fn add_adj(& mut self, _adj: Adj){
+    fn add_adj(&mut self, _adj: Adj){
         self.adj.push(_adj);
-        
+    }
+
+
+    fn get_all_adj(&self) -> &Vec<Adj>{
+        &self.adj
     }
 }
