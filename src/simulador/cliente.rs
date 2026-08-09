@@ -1,38 +1,48 @@
 
-struct Adj{
-    id: usize,
+pub struct Adj{
+    pub id: usize,
     info:Info
 }
+
+impl Adj{
+    pub fn new(_id:usize) -> Self{
+        Self{
+            id:_id,
+            info: Info { perda: 0.00, latencia: 0 }
+        }
+    }
+}
+
+
+
 
 struct Info{
     perda:f64,
     latencia:u32,
 }
 
-struct Cliente{
+pub struct Cliente{
     id: usize,
-    nome:String,
-    adj:Vec<Adj>, 
+    adj:Vec<Adj>,
 }
 
 
 impl Cliente{
-    fn new(_id:usize, _nome:String) -> Self{
+    pub fn new(_id:usize ) -> Self{
         let empty_v:Vec<Adj> = vec![];
 
         Self {
             id:_id,
-            nome: _nome,
             adj: empty_v
         }
     }
-    
-    fn add_adj(&mut self, _adj: Adj){
+
+    pub fn add_adj(&mut self, _adj: Adj){
         self.adj.push(_adj);
     }
 
 
-    fn get_all_adj(&self) -> &Vec<Adj>{
+    pub fn get_all_adj(&self) -> &Vec<Adj>{
         &self.adj
     }
 }
