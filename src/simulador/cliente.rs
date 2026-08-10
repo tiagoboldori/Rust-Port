@@ -14,8 +14,6 @@ impl Adj{
 }
 
 
-
-
 struct Info{
     perda:f64,
     latencia:u32,
