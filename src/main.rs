@@ -7,5 +7,5 @@ fn main() {
 
     cli.add_adj(adj0);
     let adj: &Vec<cliente::Adj> = cli.get_all_adj(); 
-    println!("{}", adj[0].id);
+    println!("{}", adj[0].get_id());
 }

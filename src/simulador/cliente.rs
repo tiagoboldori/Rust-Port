@@ -1,6 +1,6 @@
 
 pub struct Adj{
-    pub id: usize,
+    id: usize,
     info:Info
 }
 
@@ -10,6 +10,10 @@ impl Adj{
             id:_id,
             info: Info { perda: 0.00, latencia: 0 }
         }
+    }
+    
+    pub fn get_id(&self) -> usize {
+        self.id
     }
 }
 
@@ -42,5 +46,9 @@ impl Cliente{
 
     pub fn get_all_adj(&self) -> &Vec<Adj>{
         &self.adj
+    }
+    
+    pub fn get_id(&self) -> usize {
+        self.id
     }
 }
