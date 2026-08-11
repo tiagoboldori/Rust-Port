@@ -10,12 +10,14 @@ impl Roteador{
         Self { clientes:vec![] }
     }
     
+    
     pub fn add_cliente(&mut self, cli:cliente::Cliente) -> Result<(), String>{
+
         match self.get_cliente(cli.get_id()) {
-            Some(cli) => return Err(String::from("Cliente já existe")),
+            Some(_) => Err(String::from("Cliente já existe")),
             None => {
                 self.clientes.push(cli);
-                return Ok(());
+                Ok(())
             }
         }
     }
@@ -29,6 +31,4 @@ impl Roteador{
     pub fn get_cliente(&self, id:usize) -> Option<&cliente::Cliente>{
         self.clientes.get(id)
     }
-    
-
 }
