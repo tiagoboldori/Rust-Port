@@ -1,7 +1,7 @@
 use super::cliente;
 
 pub struct Roteador{
-    pub clientes: Vec<cliente::Cliente>
+    clientes: Vec<cliente::Cliente>
 }
 
 
