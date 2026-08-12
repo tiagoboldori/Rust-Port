@@ -28,7 +28,11 @@ impl Roteador{
     }
 
 
-    pub fn get_cliente(&self, id:usize) -> Option<&cliente::Cliente>{
-        self.clientes.get(id)
+    pub fn get_cliente(& mut self, id:usize) -> Option<& mut cliente::Cliente>{
+        self.clientes.get_mut(id)
+    }
+    
+    pub fn bfs(&self, id_origem:usize, id_destino:usize) ->(){
+        ()
     }
 }
